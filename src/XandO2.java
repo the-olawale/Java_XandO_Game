@@ -60,6 +60,7 @@ public class XandO2 {
                 tile.addActionListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e){
                         JButton tile = (JButton) e.getSource();
+                        if (gameOver) return;
                         if (tile.getText() == ""){
                             tile.setText(currentPlayer);
                             turns++;
